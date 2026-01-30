@@ -14,3 +14,24 @@
 @import url('./header.css');
 @import url('./back-link.css');
 
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px 24px;
+
+  transition: transform ease 200ms; ;
+}
+
+
+.gallery-item:hover {
+  transform: scale(1.04);
+}
+.gallery-image {
+height: 200px;
+}
+
+
+
