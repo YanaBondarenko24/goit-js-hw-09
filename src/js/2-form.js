@@ -38,7 +38,7 @@ function handlerSubmit(event) {
     if (formData.email.length === 0 || formData.message.length === 0) {
         alert("Fill please all fields");
     }else{
-    console.log(savedValue);
+    console.log(formData);
     }  
     event.target.reset();
     formData.email = "";
