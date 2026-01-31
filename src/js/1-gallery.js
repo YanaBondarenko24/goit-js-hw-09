@@ -91,9 +91,7 @@ let gallery1 = new SimpleLightbox('.gallery a', {
     captionsData: "alt",
     captionDelay: 250
 });
-gallery1.on('show.simplelightbox', () => {
-  console.log('opened');
-});
+
 
 
 

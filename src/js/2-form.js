@@ -7,6 +7,7 @@ const formData = { email: "", message: "" };
 const localStorageKey = "feedback-form-state";
 
 
+checkSavedData();
 
 
 function checkSavedData(){
@@ -15,12 +16,11 @@ function checkSavedData(){
     if (savedValue) {
         input.value = savedValue.email;
         textarea.value = savedValue.message;
-    }else{
-        input.value = "";
-        textarea.value = "";
+        formData.email = savedValue.email;
+        formData.message = savedValue.message;
+        
     }  
 }
-checkSavedData();
 
 
 
@@ -34,6 +34,7 @@ function handlerInput(event) {
 
 
 function handlerSubmit(event) {
+    event.preventDefault();
     
     if (formData.email.length === 0 || formData.message.length === 0) {
         alert("Fill please all fields");
@@ -45,5 +46,4 @@ function handlerSubmit(event) {
     formData.message = "";
     localStorage.removeItem(localStorageKey);
 }
- const dataStorage = JSON.parse(localStorage.getItem("feedback-form-state"));
-
+ 
