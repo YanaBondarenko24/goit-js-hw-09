@@ -40,10 +40,10 @@ function handlerSubmit(event) {
         alert("Fill please all fields");
     }else{
     console.log(formData);
-    }  
     event.target.reset();
     formData.email = "";
     formData.message = "";
     localStorage.removeItem(localStorageKey);
 }
+    }  
  
